@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Layout from "./Layout/Layout";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import MusicPage from "./components/MusicPage";
+import MusicInfoPlay from "./shared/MusicInfoPlay";
+import RappersPage from "./components/RappersPage";
+import RapperBlog from "./shared/RapperBlog";
+import ScrollOnTop from "./shared/ScrollOnTop";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    
+    <Layout>
+    <ScrollOnTop/>
+    <Routes>
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="/MusicPage" element={<MusicPage/>}/>
+      <Route path="/Rappers" element={<RappersPage/>}/>
+      <Route path="/Rappers/:slug" element={<RapperBlog/>}/>
+      <Route path="/MusicPage/:slug" element={<MusicInfoPlay/>}/>
+    </Routes>
+    </Layout>
+
+   </>
   );
 }
 

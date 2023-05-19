@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+@font-face {
+  font-family: "yekan";
+  src: url('./fonts/yekan-font/yekan-regular.eot');
+  src: url('./fonts/yekan-font/yekan-regular.woff') format('woff'),
+       url('./fonts/yekan-font/yekan-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family:"yekan", 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
